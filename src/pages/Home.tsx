@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { tournaments as realTournaments } from '../engine/tournamentData';
+import { tournaments as realTournaments, LAST_UPDATED } from '../engine/tournamentData';
 
 const formats = [
   { to: '/swiss', icon: '🔄', title: '瑞士轮', english: 'Swiss System', desc: '16 队，3 胜晋级，3 败淘汰，同战绩互打。', color: '#007AFF', bg: 'rgba(0,122,255,0.06)' },
@@ -41,9 +41,13 @@ export default function Home() {
 
       {/* Real tournament cards */}
       <div style={{ background: 'var(--bg-card-solid)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: 28, boxShadow: 'var(--shadow-sm)' }}>
-        <h2 style={{ fontSize: 18, fontWeight: 640, marginBottom: 6, color: '#1d1d1f' }}>真实赛事</h2>
+        <h2 style={{ fontSize: 18, fontWeight: 640, marginBottom: 6, color: '#1d1d1f' }}>真实赛事
+          <span style={{ fontSize: 11, fontWeight: 400, color: 'var(--text-tertiary)', marginLeft: 10 }}>
+            更新于 {new Date(LAST_UPDATED).toLocaleDateString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+          </span>
+        </h2>
         <p style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 20 }}>
-          查看正在进行或即将开始的赛事对阵。数据来自 HLTV / Liquipedia。
+          查看正在进行或即将开始的赛事对阵。数据来自 HLTV。每 6 小时自动更新。
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: `repeat(${pickems.length}, 1fr)`, gap: 12 }}>
           {pickems.map(p => (

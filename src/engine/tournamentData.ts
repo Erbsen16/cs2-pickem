@@ -1,5 +1,5 @@
 // CS2 tournament data — manual structure + auto-updated match results via scripts/update-data.ts
-// Last updated: 2026-04-30
+export const LAST_UPDATED = '2026-04-30T18:00:00Z'; // UTC timestamp, updated by scripts/update-data.ts
 
 export interface RealTeam {
   id: string; name: string; shortName: string; region: string; rank: number; color: string;

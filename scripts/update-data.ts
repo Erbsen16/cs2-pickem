@@ -220,6 +220,7 @@ function generateOutput(tournaments: any[]): string {
 
   return `// Auto-generated from HLTV — ${new Date().toISOString()}
 // Run: npx tsx scripts/update-data.ts
+export const LAST_UPDATED = '${new Date().toISOString()}';
 
 export interface RealTeam {
   id: string; name: string; shortName: string; region: string; rank: number; color: string;

@@ -8,7 +8,7 @@ import PickemTournament from './pages/PickemTournament';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Navbar />
       <main style={{ minHeight: 'calc(100vh - 56px)' }}>
         <Routes>
