@@ -1,6 +1,6 @@
-// Auto-generated from HLTV — 2026-05-01T02:07:41.994Z
+// Auto-generated from HLTV — 2026-05-01T08:02:33.010Z
 // Run: npx tsx scripts/update-data.ts
-export const LAST_UPDATED = '2026-05-01T02:07:41.994Z';
+export const LAST_UPDATED = '2026-05-01T08:02:33.010Z';
 
 export interface RealTeam {
   id: string; name: string; shortName: string; region: string; rank: number; color: string;
